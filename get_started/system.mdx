@@ -1,52 +1,64 @@
 ---
-title: 💻 System Requirements
-description: 'LLM-VM uses [Python](https://www.python.org/downloads/) and is compatible with version 3.8 and higher.'
+title: 💻 Requirements
+description: 'LLM-VM Installation and System Requirements'
 ---
 
-### Dependencies Used
-LLM-VM makes use of the following Python dependencies and versions.
+## Installation Requirements
+
+Before you can begin using this project, please ensure that you meet the following installation requirements:
+
+**Python**: This project requires **Python >=3.10** to run. You can check your Python version by running the following command:
+
+  ```bash
+  python3 --version
+  ```
+
+If you have an older version of Python, it's recommended to upgrade. You can either create a new Python environment using Conda with the following command:
+
+```bash
+conda create -n myenv python=3.10
+```
+
+Alternatively, you can download the latest version of [Python](https://www.python.org/downloads/).
+
+### Packages Used
+LLM-VM makes use of the following Python dependencies listed along with their versions.
 
 <Accordion title="Python Packages">
-|Package|Minimum Version|
-|-|-|
-|[dynaconf](https://pypi.org/project/dynaconf/)					|[3.2.0](https://pypi.org/project/dynaconf/3.2.0)|
-|[openai](https://pypi.org/project/openai/)					|[0.27.6](https://pypi.org/project/openai/0.27.6)|	
-|[numpy](https://pypi.org/project/numpy/)					|[1.22.4](https://pypi.org/project/numpy/1.22.4)|
-|[watchdog](https://pypi.org/project/watchdog/)					|[3.0.0](https://pypi.org/project/watchdog/3.0.0)|
-|[xdg](https://pypi.org/project/xdg/)						|[6.0.0](https://pypi.org/project/xdg/6.0.0)|
-|[accelerate](https://pypi.org/project/accelerate/)				|[0.21.0](https://pypi.org/project/accelerate/0.21.0)|
-|[transformers](https://pypi.org/project/transformers/)				|[4.29.0](https://pypi.org/project/transformers/4.29.0)|
-|[flask](https://pypi.org/project/flask/)					|[2.3.2](https://pypi.org/project/flask/2.3.2)|
-|[llama-index](https://pypi.org/project/llama-index/) 				|[0.7.7](https://pypi.org/project/llama-index/0.7.7/)|
-|[python-Levenshtein](https://pypi.org/project/python-Levenshtein/)		|[0.21.1](https://pypi.org/project/python-Levenshtein/0.21.1/)|
-|[beautifulsoup4](https://pypi.org/project/beautifulsoup4/)			|[4.12.2](https://pypi.org/project/beautifulsoup4/4.12.2)|
-|[sentencepiece](https://pypi.org/project/sentencepiece/)			|[0.1.99](https://pypi.org/project/sentencepiece/0.1.99)|
-|[sentence-transformers](https://pypi.org/project/sentence-transformers/)	|[2.2.2](https://pypi.org/project/sentence-transformers/2.2.2)|
-|[requests](https://pypi.org/project/requests/) 				|[2.26.0](https://pypi.org/project/requests/2.26.0)|
-|[spacy](https://pypi.org/project/spacy/)					|[3.5.3](https://pypi.org/project/spacy/3.5.3)|
-
-</Accordion>
-These can be installed automatically from the LLM-VM folder with
-<CodeGroup>
-```bash Regular Install
-pip3 install .
-```
-```bash Dev Install
-pip3 install --editable .
-```
-</CodeGroup>
-<Note>Installing with the ```--editable``` flag allows your changes to the codebase take effect without rebuilding with ```pip3 install .```</Note>
-### Supported Models
-Which model you choose to use will be the biggest impact on your system's requirements.
-
-LLM-VM comes with support for some default models intended to get people experimenting with LLMs. You can see their specifications here.
-
-<Accordion title="Supported LLMs with Default Models (and sizes)">
-<Snippet file="default_models_table.mdx" />
+| Package               | Minimum Version    |
+|-----------------------|--------------------|
+| [dynaconf](https://pypi.org/project/dynaconf/)                        | [>=3.2.0](https://pypi.org/project/dynaconf/)            |
+| [openai](https://pypi.org/project/openai/)                            | [>=0.27.6](https://pypi.org/project/openai/)            |
+| [numpy](https://pypi.org/project/numpy/)                              | [>=1.22.4](https://pypi.org/project/numpy/)            |
+| [watchdog](https://pypi.org/project/watchdog/)                        | [>=3.0.0](https://pypi.org/project/watchdog/)            |
+| [xdg](https://pypi.org/project/xdg/)                                  | [>=6.0.0](https://pypi.org/project/xdg/)                |
+| [accelerate](https://pypi.org/project/accelerate/)                    | [>=0.21.0](https://pypi.org/project/accelerate/)        |
+| [transformers](https://pypi.org/project/transformers/)                | [>=4.31.0](https://pypi.org/project/transformers/)    |
+| [ctransformers](https://pypi.org/project/ctransformers/)              | [>=0.2.24](https://pypi.org/project/ctransformers/)    |
+| [flask](https://pypi.org/project/flask/)                              | [>=2.3.2](https://pypi.org/project/flask/)            |
+| [flask_cors](https://pypi.org/project/flask_cors/)                    | [>=4.0.0](https://pypi.org/project/flask_cors/)        |
+| [llama-index](https://pypi.org/project/llama-index/)                  | [>=0.7.7](https://pypi.org/project/llama-index/)      |
+| [python-Levenshtein](https://pypi.org/project/python-Levenshtein/)    | [>=0.21.1](https://pypi.org/project/python-Levenshtein/)|
+| [bs4](https://pypi.org/project/bs4/)                                  | [>=0.0.1](https://pypi.org/project/bs4/)                |
+| [sentencepiece](https://pypi.org/project/sentencepiece/)              | [>=0.1.99](https://pypi.org/project/sentencepiece/)    |
+| [sentence-transformers](https://pypi.org/project/sentence-transformers/)| [>=2.2.2](https://pypi.org/project/sentence-transformers/)|
+| [requests](https://pypi.org/project/requests/)                        | [>=2.26.0](https://pypi.org/project/requests/)        |
+| [spacy](https://pypi.org/project/spacy/)                              | [>=3.5.3](https://pypi.org/project/spacy/)            |
+| [outlines](https://pypi.org/project/outlines/)                        | [>=0.0.1](https://pypi.org/project/outlines/)        |
+| [gradio](https://pypi.org/project/gradio/)                            | [>=3.42.0](https://pypi.org/project/gradio/)            |
+| [backoff](https://pypi.org/project/backoff/)                          | [>=2.2.1](https://pypi.org/project/backoff/)            |
+| [peft](https://pypi.org/project/peft/)                                | [>=0.5.0](https://pypi.org/project/peft/)                |
+| [trl](https://pypi.org/project/trl/)                                  | [>=0.7.2](https://pypi.org/project/trl/)                |
+| [pinecone-client](https://pypi.org/project/pinecone-client/)          | [>=2.2.4](https://pypi.org/project/pinecone-client/)    |
+| [PyPDF2](https://pypi.org/project/PyPDF2/)                            | [>=3.0.1](https://pypi.org/project/PyPDF2/)            |
+| [weaviate-client](https://pypi.org/project/weaviate-client/)          | [>=3.25.3](https://pypi.org/project/weaviate-client/)    |
+| [python-dotenv](https://pypi.org/project/python-dotenv/)              | [>=1.0.0](https://pypi.org/project/python-dotenv/)      |
 </Accordion>
 
-We recommend making sure you have enough RAM to load the models.
+## System Requirements
 
-Our section on [Local LLMs](quickstart/local_llms) has more information on specifying LLM models.
+Different models used in this project have varying system requirements. In most cases, RAM is a limiting factor, but many functions can work with as little as **16 GB of RAM**. However, it's essential to check the specific requirements for the models you intend to use, as they may have different sizes and resource demands.
+
+Our section on [Supported Models](quickstart/completions#supported-models) has more information on specifics of various LLM models.
 
 <Snippet file="github.mdx" />
