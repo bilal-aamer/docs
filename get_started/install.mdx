@@ -1,33 +1,83 @@
 ---
-title: 📀 Install
-description: "You can install everything you need easily from the command line. Make sure check the [system requirements](system) and that you have [Python](https://www.python.org/downloads/release/python-3114/) installed."
+title: 👨‍💻 Installation
+description: "The quickest way to get started is to run pip install llm-vm in your Python environment."
 ---
 
-## Installation
-**Use git and pip to quickly install the LLM-VM**
+## Usage
+The quickest way to get started is to run the following command in your Python environment:
 
-### Get the code
-You can download the code from our [Github](https://github.com/anarchy-ai/LLM-VM/archive/refs/heads/main.zip) repo manually, or navigate a CLI to your perferred directory and run:
-```bash CLI Install
+```bash
+pip install llm-vm
+```
+
+## Alternative Installation Methods
+
+### Cloning the Repository
+
+You can also install the LLM-VM by cloning this repository and running the setup script. Here are the steps:
+
+```bash
 git clone https://github.com/anarchy-ai/LLM-VM.git
-```
-
-### Install the module
-Once you've downloaded the code, getting it to work with python is easy, open a CLI and
-<CodeGroup>
-```bash Standard Install
 cd LLM-VM
-pip3 install .
+./setup.sh
 ```
-```bash Dev Install
+
+Please note that the above bash script `setup.sh` works for MacOS and Linux.
+
+### Manual Installation (Linux and MacOS)
+
+For manual installation on Linux and MacOS, follow these steps:
+
+```bash
+git clone https://github.com/anarchy-ai/LLM-VM.git
 cd LLM-VM
-pip3 install --editable .
+python -m venv <name>
+source <name>/bin/activate
+python -m pip install -e ."[dev]"
 ```
-</CodeGroup>
+<Note>
 
-This will install both the LLM-VM and the HTTP server.
+Make sure to replace `<name>` with your preferred name when creating a virtual environment on Linux and MacOS.
+</Note>
 
-<Note>Installing with the ```--editable``` flag allows your changes to the codebase take effect without rebuilding with ```pip3 install .```</Note>
 
+### Windows Installation
 
-<Snippet file="github.mdx" />
+If you are using Windows, you can choose between the following methods:
+
+#### Method 1: PowerShell Script
+
+Before proceeding, open PowerShell as an administrator and run the following command:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
+Afterward, you can use the following PowerShell script to install:
+
+```powershell
+git clone https://github.com/anarchy-ai/LLM-VM.git
+cd LLM-VM
+.\windows_setup.ps1
+```
+
+#### Method 2: Using Python and virtualenv
+
+Follow these steps for installation on Windows:
+
+```powershell
+winget install Python.Python.3.11
+python --version
+git clone https://github.com/anarchy-ai/LLM-VM.git
+cd LLM-VM
+python -m venv anarchyai
+anarchyai\Scripts\activate
+python -m pip install -e .
+```
+<Note>
+**Note:**
+
+- For the Windows steps to work, you need to be on Windows 10 build 16299 or later.
+- Enabling developer mode in Windows settings is recommended but not compulsory, as it can provide added advantages.
+
+</Note>
