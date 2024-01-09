@@ -2,14 +2,8 @@
 title: 📝 Generating Completions
 description: "You can quickly start generating completions through OpenAI or locally with the LLM-VM in 3 lines of code. Just specify a ```big_model``` you can select where your completions are generated from."
 ---
-
-## Examples
-Here we give two examples of how you can generate completions with our LLM-VM.
-- ```OpenAI Endpoint``` calls OpenAI's [gpt-3.5-turbo](https://platform.openai.com/docs/models/gpt-3-5) model for a completion, which requires your OpenAI API Key and utilizes their endpoint.
-- ```Local Endpoint``` example shows you how you can locally use an LLM to generate completions just as easily.
-
 <CodeGroup>
-```python OpenAI Endpoint
+```python OpenAI
 # import our client
 from llm_vm.client import Client
 
@@ -25,7 +19,7 @@ print(response)
 # Anarchy is a political ideology that advocates for the absence of government...
 ```
 
-```python Local Endpoint
+```python Local LLM
 # import our client
 from llm_vm.client import Client
 
@@ -39,10 +33,15 @@ response=client.complete(
 print(response)
 # Anarchy is a political ideology that advocates for the absence of government...
 ```
-
 </CodeGroup>
 
 <Warning>Using OpenAI's models require an OpenAI API Key and may result in costs not associated with Anarchy's LLM-VM</Warning>
+
+
+## Examples
+Here we give two examples of how you can generate completions with our LLM-VM.
+- ```OpenAI Endpoint``` calls OpenAI's [gpt-3.5-turbo](https://platform.openai.com/docs/models/gpt-3-5) model for a completion, which requires your OpenAI API Key and utilizes their endpoint.
+- ```Local Endpoint``` example shows you how you can locally use an LLM to generate completions just as easily.
 
 ## Supported Models
 We support several open LLM model families. You can see which ones and the default models used below.
@@ -51,6 +50,7 @@ We support several open LLM model families. You can see which ones and the defau
 <Snippet file="default_models_table.mdx" />
 Just replace ```'chat_gpt'``` in the example with your desired model and you're all set.
 </Accordion>
-For more information on selecting models visit our [Local LLMs](local_llms) section.
+
+For more information on selecting models visit our [Models Table](https://github.com/anarchy-ai/LLM-VM/blob/main/model_uri_tables.md).
 
 <Snippet file="github.mdx" />
